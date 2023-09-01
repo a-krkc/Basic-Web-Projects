@@ -16,7 +16,7 @@ function eventListeners () {        //* Tüm eventListenerlar
     clearButton.addEventListener("click", clearAllTodos);
 }
 
-function addTodo (e) {  //* form alanındaki ekleme ilk işlemi
+function addTodo (e) {  //* form alanındakini ekleme 
     const newTodo = todoInput.value.trim(); //* input alanındaki değer, trim > boşlukları silme
     if (newTodo === "") {                   //* todo boşsa
         showAlert("danger", "Lütfen bir todo girin!");
@@ -35,18 +35,20 @@ function addTodo (e) {  //* form alanındaki ekleme ilk işlemi
 }
 
 function checkTodo (newTodo) {  //* newTodo listede var mı yok mu? 
-    const todos = JSON.parse(localStorage.getItem("todos"));
-
-    const todoExists = todos.some(function (todo) {     //* array içinde dolaşma ve return
-        return todo.toLowerCase() === newTodo.toLowerCase();
-    });
-
-    if (todoExists) {
-        console.log("aynısı var");
-        return false;
+    const todos = getTodosFromStorage()
+    if (todos !== null){
+        const todoExists = todos.some(function (todo) {     //* array içinde dolaşma ve return
+            return todo.toLowerCase() === newTodo.toLowerCase();
+        });
+        if (todoExists) {
+            console.log("aynısı var");
+            return false;
+        } else {
+            console.log("aynısı yok")
+            return true;
+        }
     }
-    console.log("aynısı yok");
-    return true;
+    
 }
 
 function addTodoToUI (todo) {    //* string değeri list item olarak UI'a ekleyecek
