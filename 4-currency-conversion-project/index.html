@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Conversion</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2>EXCHANGE API - Currency Conversion App</h2>
+        <div id="inputs">
+          <div>
+            <label for="numberInput"></label>
+            <input type="number" min="1" id="numberInput" />
+          </div>
+          <div>
+            <label for="selection-1"></label>
+            <select name="" id="selection-1">
+              <option value="1">USD</option>
+              <option value="2">EUR</option>
+              <option value="3">TRY</option>
+            </select>
+            <span>&rarr;</span>
+            <label for="selection-2"></label>
+            <select name="" id="selection-2">
+              <option value="1">TRY</option>
+              <option value="2">USD</option>
+              <option value="3">EUR</option>
+            </select>
+          </div>
+          <div><span class="resultArea"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/currency.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
