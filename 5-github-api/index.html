@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub API</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      .bg-color {
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body style="background-color: bisque">
+    <div class="container searchContainer">
+      <div class="search card card-body bg-color">
+        <h3>Github Kullanıcılarını Arayın</h3>
+        <p class="lead">GitHub Kullanıcı Adı</p>
+        <form id="github-form">
+          <input
+            type="text"
+            name="githubname"
+            id="github-name"
+            class="form-control"
+            placeholder="Lütfen Bir Kullanıcı Adı Girin!"
+            style="background-color: transparent"
+          />
+          <br />
+          <button type="submit" class="btn btn-dark">Ara</button>
+        </form>
+        <br /><br />
+      </div>
+      <br />
+      <div id="profile">
+
+      </div>
+      <h3 class="page-heading mb-3">Repolar</h3>
+      <div id="repos">
+        
+      </div>
+      <h3 class="page-heading mb-3">Son Aramalar</h3>
+      <div id="lastSearch" style="margin-bottom: 100px">
+        <ul class="list-group" id="last-users">
+
+        </ul>
+        <hr />
+        <button id="clear-last-users" class="btn btn-dark">
+          Son Arananları Temizle
+        </button>
+      </div>
+    </div>
+
+    <script src="src/script/github.js"></script>
+    <script src="src/script/storage.js"></script>
+    <script src="src/script/ui.js"></script>
+    <script src="src/script/app.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
